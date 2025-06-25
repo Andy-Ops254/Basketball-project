@@ -26,9 +26,9 @@ function updateTimer() {
     let timeString=minsString+ ':' +secString;
     timerElement.textContent=timeString; //shows time on page
 }
-
+    //this function increments secs by 1
     function tick() {
-        seconds+1;
+        seconds=seconds+1;
         updateTimer()
     }
 
@@ -37,6 +37,27 @@ let timerInterval=null;
 const startbtnElement=document.getElementById('startbtn');
 startbtnElement.addEventListener('click',function (event){
 
-    timerInterval=setInterval(tick, 1000)
-})
+    timerInterval=setInterval(tick, 1000);
+    console.log('Timer start')
+});
+//Stop button
+
+const stopbtnElement = document.getElementById('stopbtn');
+stopbtnElement.addEventListener('click', (event) =>{
+    //the if statement stops the timer
+
+    if(timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+
+    //reset timer
+    // seconds=0;
+    // updateTimer();
+
+    console.log('stop');
+
+});
+
+
 
