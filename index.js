@@ -46,18 +46,22 @@ const stopbtnElement = document.getElementById('stopbtn');
 stopbtnElement.addEventListener('click', (event) =>{
     //the if statement stops the timer
 
-    if(timerInterval) {
+    if(timerInterval) {// stops timer from counting
         clearInterval(timerInterval);
-        timerInterval = null;
     }
-
-    //reset timer
-    // seconds=0;
-    // updateTimer();
-
     console.log('stop');
 
 });
+
+    //rest btn
+    const resetbtnElement = document.getElementById('resetbtn');
+    resetbtnElement.addEventListener('click', (event)=>{
+            //reset the entire thing
+            seconds=0
+            updateTimer()
+        
+        console.log('rudisha 0')
+    })
 
 
 
