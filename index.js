@@ -1,6 +1,7 @@
 //timer
 const timerElement=document.getElementById('timer')
 let seconds=0;
+
 function updateTimer() {
     //math.floor rounds numbers up
     let mins=Math.floor(seconds /60);
@@ -27,10 +28,12 @@ function updateTimer() {
     timerElement.textContent=timeString; //shows time on page
 }
     //this function increments secs by 1
+
     function tick() {
         seconds=seconds+1;
         updateTimer()
     }
+
 
 //start button
 let timerInterval=null;
@@ -40,6 +43,7 @@ startbtnElement.addEventListener('click',function (event){
     timerInterval=setInterval(tick, 1000);
     console.log('Timer start')
 });
+
 //Stop button
 
 const stopbtnElement = document.getElementById('stopbtn');
@@ -53,6 +57,7 @@ stopbtnElement.addEventListener('click', (event) =>{
 
 });
 
+
     //rest btn
     const resetbtnElement = document.getElementById('resetbtn');
     resetbtnElement.addEventListener('click', (event)=>{
@@ -64,4 +69,27 @@ stopbtnElement.addEventListener('click', (event) =>{
     })
 
 
+//exercise counter
+    let freeThrows = 0;
+        const freeThrowMakes= document.getElementById('freeThrowMakes')
+    const freeThrowAdd = document.getElementById('freethrow-add');
+    freeThrowAdd.addEventListener('click', (event)=>{
+        freeThrows = freeThrows+1
+
+        //this grabs the counter number by id and allows us to change its content as we press button.
+        freeThrowMakes.textContent=freeThrows;
+    })
+ //minus button
+
+
+    const freeThrowMinus=document.getElementById('freethrow-minus');
+        freeThrowMinus.addEventListener('click' ,function(event){
+            freeThrows= freeThrows-1;
+            if(freeThrows < 0){// sets free throw back to 0 if less than 0
+                freeThrows=0;
+            }
+                freeThrowMakes.textContent=freeThrows;
+        })
+
+    
 
