@@ -7,8 +7,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
@@ -247,6 +252,9 @@
   .w-18 {
     width: calc(var(--spacing) * 18);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -307,6 +315,9 @@
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -378,11 +389,29 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
   .align-middle {
     vertical-align: middle;
+  }
+  .font-\[cu\] {
+    font-family: cu;
   }
   .font-\[curs\] {
     font-family: curs;
@@ -390,8 +419,17 @@
   .font-\[cursive\] {
     font-family: cursive;
   }
+  .font-\[fantasy\] {
+    font-family: fantasy;
+  }
   .font-mono {
     font-family: var(--font-mono);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .text-\[1px\] {
+    font-size: 1px;
   }
   .text-\[2px\] {
     font-size: 2px;
@@ -401,6 +439,12 @@
   }
   .text-\[8px\] {
     font-size: 8px;
+  }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
+  .text-\[17px\] {
+    font-size: 17px;
   }
   .text-\[18px\] {
     font-size: 18px;
@@ -458,14 +502,23 @@
   .text-\[\#\] {
     color: #;
   }
+  .text-\[1\] {
+    color: 1;
+  }
   .text-\[2\] {
     color: 2;
   }
   .text-\[8p1x\] {
     color: 8p1x;
   }
+  .text-\[18\] {
+    color: 18;
+  }
   .text-\[30p\] {
     color: 30p;
+  }
+  .text-\[black\] {
+    color: black;
   }
   .text-\[px\] {
     color: px;
@@ -565,6 +618,41 @@
     &:hover {
       @media (hover: hover) {
         background-color: #;
+      }
+    }
+  }
+  .hover\:bg-amber-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-amber-500);
+      }
+    }
+  }
+  .hover\:bg-green-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-400);
+      }
+    }
+  }
+  .hover\:bg-green-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-500);
+      }
+    }
+  }
+  .hover\:bg-red-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-400);
+      }
+    }
+  }
+  .hover\:bg-red-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-500);
       }
     }
   }
