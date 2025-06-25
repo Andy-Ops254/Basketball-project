@@ -14,10 +14,21 @@
             <h1 class="text-black text text-[28px] md:text-[35px] font-bold">BASKETBALL APP</h1>
         </div>
         <ul class="space-x-4 my-2 font-bold">
-            <button class="bg-[#000000] text-white p-2 rounded-xl hover:bg-[#FF6500] hover:animate-bounce cursor-crosshair">Workout</button>
-            <button class="bg-white text-orange-500 p-2 rounded-xl hover:bg-[#000000] hover:animate-bounce cursor-crosshair">History</button>
+            <button class="bg-[#000000] text-white p-2 rounded-xl hover:bg-[#FF6500] hover:animate-bounce cursor-crosshair bounce transition duration-400 ease-in-out">Workout</button>
+            <button class="bg-white text-orange-500 p-2 rounded-xl hover:bg-[#000000] hover:animate-bounce cursor-crosshair bounce transition duration-400 ease-in-out">History</button>
         </ul>
     </nav>
+
+    <main class="flex items-center flex-col">
+        <h1 id="timer" class="text-[25px] md:text-[40px] font-mono font-extrabold text-[#FF9D3D]">00:00</h1>
+        <div class="flex flex-row space-x-4 py-2">
+        <button class="bg-[#1B4242] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair">START</button>
+        <button class="bg-[#FF204E] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair">STOP</button>
+        <button class="bg-[#F2613F] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair"> RESET</button>
+        </div>
+    </main>
+
+    
 </body>
 <script src="index.js"></script>
 </html>
