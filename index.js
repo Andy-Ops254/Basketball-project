@@ -70,6 +70,7 @@ stopbtnElement.addEventListener('click', (event) =>{
 
 
 //exercise counter
+//free throw counter.
     let freeThrows = 0;
         const freeThrowMakes= document.getElementById('freeThrowMakes')
     const freeThrowAdd = document.getElementById('freethrow-add');
@@ -91,5 +92,47 @@ stopbtnElement.addEventListener('click', (event) =>{
                 freeThrowMakes.textContent=freeThrows;
         })
 
+    //layups counter
+    //add button
+    let layUps=0;
+    const cleanLayUp=document.querySelector('#crispLays');
+    const jellyLays=document.getElementById('layups-add');
+    jellyLays.addEventListener('click', (event) =>{
+        layUps=layUps+1;
+        cleanLayUp.textContent=layUps;
+    });
+
+    //minus layup button
+    const noJellys=document.getElementById('layups-minus');
+    noJellys.addEventListener('click', function(event){
+        layUps=layUps-1;
+        if(layUps<0){
+            layUps=0
+        }
+        cleanLayUp.textContent=layUps;
+    });
+
+
+    //3 point shoot-out
+    //add button
+    let threePoint=0;
+    const splashNet=document.getElementById('swish');
+    const splashAdd=document.getElementById('3point-add');
+    splashAdd.addEventListener('click', (event) => {
+        threePoint=threePoint+1;
+        splashNet.textContent=threePoint;
+        console.log('zidisha')
+    });
+
+    //3point minus button
+    const airBall=document.getElementById('3point-minus');
+    airBall.addEventListener('click', (event) => {
+        threePoint = threePoint-1;
+        if(threePoint < 0) {
+            threePoint = 0
+        }
+        splashNet.textContent = threePoint;
+        console.log('amerusha kidi')
+    })
     
 
