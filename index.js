@@ -137,12 +137,17 @@ stopbtnElement.addEventListener('click', (event) =>{
     
 
     //workout history  and finish button
-    const historyElement=document.getElementById('history-list');
+    const historyListElement=document.getElementById('history-list');
     const finishButton=document.getElementById('youmadeit-btn');
 
     finishButton.addEventListener('click', (event) => {//this function collects data of all three activities
-        let workSummary= "Free Throws:" + freeThrows + "Jellys:" + layUps + "Splash:" +threePoint //summary string
+        let workSummary= "Free Throws:"  + freeThrows +  " | Jellys:" + layUps +  " | Splash:" +threePoint //summary string
 
     //creating a new <li> 
-    
-    })
+    let newElement= document.createElement('li');
+    newElement.className= "font-bold"
+    newElement.textContent = workSummary;// updating the elements content into summary 
+
+    //adding element to the history list
+    historyListElement.appendChild(newElement);
+    });
