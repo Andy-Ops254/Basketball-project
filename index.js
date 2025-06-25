@@ -136,3 +136,13 @@ stopbtnElement.addEventListener('click', (event) =>{
     })
     
 
+    //workout history  and finish button
+    const historyElement=document.getElementById('history-list');
+    const finishButton=document.getElementById('youmadeit-btn');
+
+    finishButton.addEventListener('click', (event) => {//this function collects data of all three activities
+        let workSummary= "Free Throws:" + freeThrows + "Jellys:" + layUps + "Splash:" +threePoint //summary string
+
+    //creating a new <li> 
+    
+    })
