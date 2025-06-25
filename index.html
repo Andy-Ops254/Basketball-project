@@ -14,8 +14,8 @@
             <h1 class="text-black text text-[28px] md:text-[35px] font-bold"><span class="text-white">BASKETBALL</span> APP</h1>
         </div>
         <ul class="space-x-4 my-2 font-bold">
-            <button class="bg-[#000000] text-white p-2 rounded-xl hover:bg-[#FF6500] hover:animate-bounce cursor-crosshair bounce transition duration-400 ease-in-out">Workout</button>
-            <button class="bg-white text-orange-500 p-2 rounded-xl hover:bg-[#000000] hover:animate-bounce cursor-crosshair bounce transition duration-400 ease-in-out">History</button>
+            <button id="workoutbtn" class="bg-[#000000] text-white p-2 rounded-xl hover:bg-[#FF6500] hover:animate-bounce cursor-crosshair bounce transition duration-400 ease-in-out">Workout</button>
+            <button id="historybtn" class="bg-white text-orange-500 p-2 rounded-xl hover:bg-[#000000] hover:animate-bounce cursor-crosshair bounce transition duration-400 ease-in-out">History</button>
         </ul>
     </nav>
 
@@ -23,9 +23,9 @@
         <div class="bg-white/80 p-8 rounded-2xl shadow-lg w-1/2 max-w-lg mt-8 flex flex-col items-center mx-auto">
         <h1 id="timer" class="text-[25px] md:text-[40px] font-mono font-extrabold text-[#FF9D3D] mx-8">00:00</h1>
         <div class="flex flex-row space-x-4 py-2">
-        <button class="bg-[#1B4242] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair">START</button>
-        <button class="bg-[#FF204E] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair">STOP</button>
-        <button class="bg-[#F2613F] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair"> RESET</button>
+        <button id="startbtn" class="bg-[#1B4242] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair">START</button>
+        <button id="stopbtn" class="bg-[#FF204E] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair">STOP</button>
+        <button id="resetbtn" class="bg-[#F2613F] text-white font-bold text-[18px] p-2 rounded-xl hover:animate-bounce transition duration-400 ease-in-out cursor-crosshair"> RESET</button>
         </div>
         </div>
     </main>
@@ -36,26 +36,26 @@
         <ul class="space-y-5">
             <li class="flex items-center space-x-4">
                 <span class="text-[18px] font-semibold w-32">FREE THROWS</span>
-                <button class="bg-[#1B4242] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-green-500">+</button>
+                <button id="freethrow-add" class="bg-[#1B4242] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-green-500">+</button>
                 <span class="font-bold font-mono text-[20px]">0</span>
-                <button class="bg-[#FF204E] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-red-400">-</button>
+                <button class="freethrow-minus" class="bg-[#FF204E] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-red-400">-</button>
             </li>
 
             <li class="flex items-center space-x-4">
                 <span class="text-[18px] font-semibold w-32">LAYUPS</span>
-                <button class="bg-[#1B4242] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-green-500">+</button>
+                <button id="layups-add" class="bg-[#1B4242] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-green-500">+</button>
                 <span class="font-bold font-mono text-[20px]">0</span>
-                <button class="bg-[#FF204E] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-red-400">-</button>
+                <button id="layups-minus" class="bg-[#FF204E] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-red-400">-</button>
             </li>
 
             <li class="flex items-center space-x-4">
                 <span class="text-[18px] font-semibold w-32">3 POINT SHOOT OUT</span>
-                <button class="bg-[#1B4242] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-green-500">+</button>
+                <button id="3point-add" class="bg-[#1B4242] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-green-500">+</button>
                 <span class="font-bold font-mono text-[20px]">0</span>
-                <button class="bg-[#FF204E] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-red-400">-</button>
+                <button id="3point-minus" class="bg-[#FF204E] font-bold text-white text-[18px] rounded-full px-4 py-2 cursor-crosshair hover:bg-red-400">-</button>
             </li>
         </ul>
-        <button class="bg-green-700 py-2 px-4 rounded-2xl mt-8 text-white font-bold w-full cursor-pointer hover:hover:bg-green-500">YOU'VE MADE IT YOUNG BLOOD! FINISH</button>
+        <button id="youmadeit-btn" class="bg-green-700 py-2 px-4 rounded-2xl mt-8 text-white font-bold w-full cursor-pointer hover:hover:bg-green-500">YOU'VE MADE IT YOUNG BLOOD! FINISH</button>
         </div>
     </section>
 
@@ -67,7 +67,7 @@
     </section>
 
 
-    <section id="workOutCreation" class="hidden bg-white/80 p-4 rounded-xl w-[650px] mt-8 flex flex-row items-center mx-auto shadow-xl">
+    <section id="workOutCreation" class="bg-white/80 p-4 rounded-xl w-[650px] mt-8 flex flex-row items-center mx-auto shadow-xl">
     <h2 class="text-[18px] font-semibold font-serif text-[#ec123e] pr-4">New Grind</h2>
     <form id="workoutForm" class="flex flex-row space-x-4 w-full">
         <input type="text" id="workOutName" placeholder="Exercise" class="border-x  text-center outline outline-[#F2613F] cursor-pointer" >
