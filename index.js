@@ -150,4 +150,43 @@ stopbtnElement.addEventListener('click', (event) =>{
 
     //adding element to the history list
     historyListElement.appendChild(newElement);
+
+
+//creating an object with data for server 
+    let workout = {
+        freeThrows: freeThrows,
+        layUps:layUps,
+        threePoint: threePoint, time: new  Date().toLocaleDateString()
+    };
+//'POST'
+    fetch(' http://localhost:3000/workouts',{
+        method:'POST',
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "applicatio/json",
+        },
+        body: JSON.stringify(workout)
+        
+    }) 
+    .then(response => response.json()) //two thens are promises the first one converts returnes data into JS
+        .then(response =>{
+            // console.log('nimepata')
+            return response
+        })
+        .catch (alert => { //prevents javascrip from failing slowly and gives and error that comes from this method.
+            console.log('Anguka Nayo!')
+        })
+    
     });
+
+    fetch('http://localhost:3000/workouts')
+    .then(response => response.json())
+    .then(data =>{
+        data.forEach(workout => {
+            let workSummary= "Free Throws:"  + workout.freeThrows +  " | Jellys:" + workout.layUps +  " | Splash:" +workout.threePoint + " | Date:" + workout.time;
+            let newElement= document.createElement('li');
+            newElement.className= "font-bold"
+            newElement.textContent = workSummary
+            historyListElement.appendChild(newElement);
+        })
+    })

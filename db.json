@@ -1,0 +1,62 @@
+{
+  "workouts": [
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "id": 1
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "id": 2
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "id": 3
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "id": 4
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "id": 5
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "time": "6/26/2025",
+      "id": 6
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "time": "6/26/2025",
+      "id": 7
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 2,
+      "time": "6/26/2025",
+      "id": 8
+    },
+    {
+      "freeThrows": 1,
+      "layUps": 1,
+      "threePoint": 1,
+      "time": "6/26/2025",
+      "id": 9
+    }
+  ]
+}
