@@ -1,3 +1,5 @@
+
+
 //timer
 const timerElement=document.getElementById('timer')
 let seconds=0;
@@ -14,7 +16,7 @@ function updateTimer() {
         minsString = '0' +mins;
     }
     else {
-        minsString='' + mins;
+        minsString = mins;
     }
 
     let secString;
@@ -22,7 +24,7 @@ function updateTimer() {
         secString= '0' + sec;
     }
     else{
-        secString = '' +sec
+        secString = sec;
     }
     let timeString=minsString+ ':' +secString;
     timerElement.textContent=timeString; //shows time on page
@@ -76,7 +78,6 @@ stopbtnElement.addEventListener('click', (event) =>{
     const freeThrowAdd = document.getElementById('freethrow-add');
     freeThrowAdd.addEventListener('click', (event)=>{
         freeThrows = freeThrows+1
-
         //this grabs the counter number by id and allows us to change its content as we press button.
         freeThrowMakes.textContent=freeThrows;
     })
