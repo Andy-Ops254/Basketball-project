@@ -1,3 +1,21 @@
+const BASE_URL='https://basketball-app-server-hirq.onrender.com/workouts'
+
+let grindsList= [
+    {
+        grindName : "FREE THROWS",
+        currentValue: 0
+    },
+    {
+        grindName: "LAYUPS",
+        currentValue: 0
+    },
+    {
+        grindName: "3 POINT SHOOT OUT",
+        currentValue: 0
+    }
+]
+
+    const grindsListContainer = document.getElementById('grinds')
 
 
 //timer
@@ -142,7 +160,7 @@ stopbtnElement.addEventListener('click', (event) =>{
     const finishButton=document.getElementById('youmadeit-btn');
 
     finishButton.addEventListener('click', (event) => {//this function collects data of all three activities
-        let workSummary= "Free Throws:"  + freeThrows +  " | Jellys:" + layUps +  " | Splash:" +threePoint //summary string
+        let workSummary= "Free Throws:"  + freeThrows +  " | Jellys:" + layUps +  " | Splash:" +threePoint + " | Date:" + new Date().toLocaleDateString();//summary string
 
     //creating a new <li> 
     let newElement= document.createElement('li');
@@ -157,10 +175,11 @@ stopbtnElement.addEventListener('click', (event) =>{
     let workout = {
         freeThrows: freeThrows,
         layUps:layUps,
-        threePoint: threePoint, time: new  Date().toLocaleDateString()
+        threePoint: threePoint, 
+        time: new  Date().toLocaleDateString()
     };
 //'POST'
-    fetch(' http://localhost:3000/workouts',{
+    fetch(BASE_URL,{
         method:'POST',
         headers: {
             "Content-Type": "application/json",
@@ -180,7 +199,7 @@ stopbtnElement.addEventListener('click', (event) =>{
     
     });
 
-    fetch('http://localhost:3000/workouts')
+    fetch(BASE_URL)
     .then(response => response.json())
     .then(data =>{
         data.forEach(workout => {

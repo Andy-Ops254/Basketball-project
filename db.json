@@ -57,6 +57,27 @@
       "threePoint": 1,
       "time": "6/26/2025",
       "id": 9
+    },
+    {
+      "freeThrows": 7,
+      "layUps": 5,
+      "threePoint": 4,
+      "time": "6/26/2025",
+      "id": 10
+    },
+    {
+      "freeThrows": 4,
+      "layUps": 2,
+      "threePoint": 1,
+      "time": "6/26/2025",
+      "id": 11
+    },
+    {
+      "freeThrows": 3,
+      "layUps": 2,
+      "threePoint": 1,
+      "time": "6/26/2025",
+      "id": 12
     }
   ]
 }
